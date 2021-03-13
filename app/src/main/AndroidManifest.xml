@@ -3,11 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.acemirr.projectwork">
 
-    <uses-sdk
-        android:minSdkVersion="21"
-        tools:overrideLibrary="com.ocetnik.timer, com.facebook.react, org.jitsi.meet.sdk, co.apptailor.googlesignin,         com.calendarevents, com.reactnativecommunity.asyncstorage, com.reactnativecommunity.netinfo,         com.kevinresol.react_native_default_preference, com.rnimmersive, com.corbt.keepawake,         com.BV.LinearGradient, com.horcrux.svg, com.oney.WebRTCModule" />
+    <uses-sdk tools:overrideLibrary="com.ocetnik.timer, com.facebook.react, org.jitsi.meet.sdk, co.apptailor.googlesignin,         com.calendarevents, com.reactnativecommunity.asyncstorage, com.reactnativecommunity.netinfo,         com.kevinresol.react_native_default_preference, com.rnimmersive, com.corbt.keepawake,         com.BV.LinearGradient, com.horcrux.svg, com.oney.WebRTCModule" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.BATTERY_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,8 +19,9 @@
         android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjectWork">
-        <activity android:name=".ui.view.AddMeetActivity"></activity>
+        android:theme="@style/Theme.ProjectWork"
+        tools:targetApi="n">
+        <activity android:name=".ui.view.AddMeetActivity" />
         <activity android:name=".ui.view.ListMeetActivity" />
         <activity android:name=".ui.view.VerifyActivity" />
         <activity android:name=".ui.view.SplashActivity">

@@ -11,14 +11,20 @@ import com.acemirr.projectwork.ui.adapter.ListMeetAdapter
 import com.acemirr.projectwork.ui.base.BaseActivity
 import com.acemirr.projectwork.ui.base.ViewModelFactory
 import com.acemirr.projectwork.ui.viewmodel.MeetViewModel
+import com.testfairy.TestFairy
 
 class ListMeetActivity : BaseActivity<ActivityListMeetBinding>() {
     private val adapter = ListMeetAdapter()
     private lateinit var viewModel : MeetViewModel
 
     override fun initData(){
-        viewModel = ViewModelProvider(this,ViewModelFactory()).get(MeetViewModel::class.java)
-        viewModel.getListMeet()
+        try {
+            viewModel = ViewModelProvider(this, ViewModelFactory()).get(MeetViewModel::class.java)
+            viewModel.getListMeet()
+            TestFairy.begin(this, "SDK-kYtGo3pS")
+        }catch (e:Exception){
+            Toast.makeText(this, "Yahh Aplikasi Tertutup", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun initUI(){

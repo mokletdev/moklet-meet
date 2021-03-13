@@ -7,6 +7,10 @@ orbs:
 language: java
 sudo: false
 
+general:
+  branches:
+    only:
+      - master
 jobs:
   build:
     working_directory: ~/ProjectWork

@@ -34,4 +34,4 @@ jobs:
           api-key: TESTFAIRY_KEY
           auto-update: 'on'
           changelog: $CIRCLE_SHA1
-          file: /home/circleci/ProjectWork/app/build/outputs/apk/production/release/*.apk
+          file: app/build/outputs/apk/production/release/*.apk

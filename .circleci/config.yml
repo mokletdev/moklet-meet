@@ -33,5 +33,5 @@ jobs:
       - testfairy/uploader:
           api-key: TESTFAIRY_KEY
           auto-update: 'on'
-          changelog: $CIRCLE_SHA1
+          changelog: COMMIT_MESSAGE
           file: app/build/outputs/apk/production/release/*.apk

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.acemirr.projectwork">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        tools:overrideLibrary="com.ocetnik.timer, com.facebook.react, org.jitsi.meet.sdk, co.apptailor.googlesignin,         com.calendarevents, com.reactnativecommunity.asyncstorage, com.reactnativecommunity.netinfo,         com.kevinresol.react_native_default_preference, com.rnimmersive, com.corbt.keepawake,         com.BV.LinearGradient, com.horcrux.svg, com.oney.WebRTCModule" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_square"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectWork">
+        <activity android:name=".ui.view.AddMeetActivity"></activity>
+        <activity android:name=".ui.view.ListMeetActivity" />
+        <activity android:name=".ui.view.VerifyActivity" />
+        <activity android:name=".ui.view.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="name">Nama</string>
+    <string name="meet_name">Nama Meeting</string>
+    <string name="creator_name">Nama Pembuat</string>
+    <string name="join_meet">Join Meeting</string>
+    <string name="start_date">Mulai : %1$s</string>
+    <string name="end_date">Selesai : %1$s</string>
+    <string name="range_date">%1$s - %2$s</string>
+</resources>

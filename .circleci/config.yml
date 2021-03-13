@@ -28,13 +28,10 @@ jobs:
           name: Change Permission
           command: chmod +x gradlew
       - run:
-          name: Run Lint
-          command: ./gradlew lintProductionRelease
-      - run:
           name: Deploy Application
           command: ./gradlew assembleProductionRelease
       - testfairy/uploader:
           api-key: TESTFAIRY_KEY
           auto-update: 'on'
           changelog: $CIRCLE_SHA1
-          file: /home/circleci/code/app/build/outputs/apk/production/release/*.apk
+          file: /home/circleci/ProjectWork/app/build/outputs/apk/production/release/*.apk

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.acemirr.projectwork">
+    package="com.amirlabs.moklet_meet">
 
-    <uses-sdk tools:overrideLibrary="com.ocetnik.timer, com.facebook.react, org.jitsi.meet.sdk, co.apptailor.googlesignin,         com.calendarevents, com.reactnativecommunity.asyncstorage, com.reactnativecommunity.netinfo,         com.kevinresol.react_native_default_preference, com.rnimmersive, com.corbt.keepawake,         com.BV.LinearGradient, com.horcrux.svg, com.oney.WebRTCModule" />
+    <uses-sdk tools:overrideLibrary="com.ocetnik.timer, com.reactnativecommunity.webview, com.brentvatne.react, org.devio.rn.splashscreen, com.reactnativecommunity.slider, com.swmansion.rnscreens, com.th3rdwave.safeareacontext, com.swmansion.reanimated, com.oblador.performance, com.reactnativepagerview, org.reactnative.maskedview, org.linusu, com.swmansion.gesturehandler.react, com.reactnativecommunity.clipboard, com.reactnativegooglesignin, com.learnium.RNDeviceInfo, com.amplitude.reactnative, com.facebook.react, org.jitsi.meet.sdk, co.apptailor.googlesignin,         com.calendarevents, com.reactnativecommunity.asyncstorage, com.reactnativecommunity.netinfo,         com.kevinresol.react_native_default_preference, com.rnimmersive, com.corbt.keepawake,         com.BV.LinearGradient, com.horcrux.svg, com.oney.WebRTCModule" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_LOGS"
@@ -16,15 +16,16 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_square"
         android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectWork"
         tools:targetApi="n">
         <activity android:name=".ui.view.AddMeetActivity" />
         <activity android:name=".ui.view.ListMeetActivity" />
         <activity android:name=".ui.view.VerifyActivity" />
-        <activity android:name=".ui.view.SplashActivity">
+        <activity android:name=".ui.view.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,7 +8,7 @@ Moklet Meet is Video Conference Application
 </p>
 
 ### Landing Page
-https://tsfr.io/moklet-meet
+https://tsfr.io/moklet-conference
 
 ### Backend
 https://github.com/4mirfor3v3r/Moklet-Meet-BE
